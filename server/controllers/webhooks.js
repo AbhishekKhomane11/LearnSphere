@@ -2,7 +2,7 @@ import  {Webhook} from 'svix';
 import User from "../models/User.js";
 import { Purchase } from '../models/Purchase.js';
 import Course from '../models/Course.js';
-
+import Stripe from 'stripe';
 //API Controller Function to Manage Clerk User with database
 
 export const clerkWebhooks = async (req, res)=>{
@@ -114,4 +114,6 @@ export const stripeWebhooks = async(req, res)=>{
   // Return a response to acknowledge receipt of the event
   response.json({received: true});
 }
+
+
 
