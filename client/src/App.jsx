@@ -59,6 +59,7 @@ import MyCourses from './Pages/Educator/MyCourses'
 import Navbar from './components/Student/Navbar'
 import Player from './Pages/Student/Player'
 import 'quill/dist/quill.snow.css'
+import {ToastContainer} from 'react-toastify';
 const App = () => {
   const location = useLocation();
 
@@ -67,6 +68,7 @@ const App = () => {
 
   return (
     <div className='text-default min-h-screen bg-white'>
+      <ToastContainer/>
       {!isEducatorRoute && <Navbar />}
       <Routes>
         <Route path='/' element={<Home />} />
